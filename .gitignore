@@ -1,0 +1,19 @@
+# Ignore all
+*
+
+# Except these ...
+!.gitignore
+
+!*.py
+!*.sh
+!*.md
+!*.ipynb
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!Makefile
+!*.png
+
+# ...even if they are in subdirectories
+!*/
