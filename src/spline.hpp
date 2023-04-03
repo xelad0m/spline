@@ -143,7 +143,6 @@ void Spline<T>::fit(const std::vector<T> & y)
     } else if ( bc_left_type == bc_type::notaknot && !zerocorner ) {
         assert(n+1 >= 4); // you need at least 4 points to make not-a-knot bound
         l[0] = h[0]*h[0] - h[1]*h[1];                                   // C[0]
-        l[0] = (l[0]==0)?tol:l[0];
         u[0] = ( 2*h[0]*h[0] + 3*h[0]*h[1] + h[1]*h[1] ) / l[0];        // B[0] / l[0]
         z[0] = ( 3*h[0]*((a[2]-a[1])/h[1] - (a[1]-a[0])/h[0]) ) / l[0]; // F[0] / l[0]
     } else if ( bc_left_type == bc_type::notaknot && zerocorner ) {      // zero corner case
