@@ -4,10 +4,11 @@ Simple header-only C++ library that implements a pretty fast cubic spline interp
 
 Possible boundary conditions:
 - **clamped**
-    - parametrization of first derivative
+    - parametrization of the first derivative
 - **natural** (default)
-    - parametrization of second derivative
+    - parametrization of the second derivative
 - **not-a-knot**
+    - condition for the third derivative
 
 Methods for obtaining derivatives of the curve and its integration are also available.
 
