@@ -3,6 +3,7 @@
 1. Basic usage example
 
 ```
+make basics
 ./basics
 ...
 ```
@@ -19,6 +20,12 @@ grid transform:  loops=2e+04,   0.121s (1.4e+04 cycl)   0.110s (1.3e+04 cycl)   
 
 tk vs ALGLIB accuracy: max difference = 6.66e-15, l2-norm difference = 4.17e-19
 this vs ALGLIB accuracy: max difference = 4.44e-15, l2-norm difference = 3.35e-19
+```
+To build bechmark app you need to have alglib installed kind of this way (package name depends on linux distro, it could be `alglib`, `libalglib`, `libalglib3` and so on)
+
+```
+sudo apt-get install libalglib
+make bench
 ```
 
 3. Comparison with [**SciPy**](https://scipy.org/) (`scipy.interpolate`) cubic spline implementations:
