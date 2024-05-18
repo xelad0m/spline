@@ -33,6 +33,11 @@ make bench
 - Fortran based `splrep`+`splev`
 - Cython based `make_interp_spline`
 - Using simple `ctypes` wrapper for this implementation 
-- [Results](./tests.ipynb) of this implementation are between Fortran and Cython in average
+- [Results](./tests.ipynb) of this implementation are 3-6x faster than Fortran and Cython implementations in average:
 
+|implementation|build|evaluate| build & evaluate|
+|-|:-:|:-:|:-:|
+|this|8.9 µs|14.8 µs|23.6 µs
+`splrep`+`splev`|10.3 µs|61.7 µs|70.6 µs
+`make_interp_spline`|73 µs|61.1 µs|141 µs
 
